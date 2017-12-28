@@ -30,5 +30,8 @@
 	<dubbo:protocol port="20880" name="dubbo"/>
 	<!-- 4： 暴露实现类-->
 	<dubbo:service interface="cn.itcast.core.service.TestTbService" ref="testTbService"/>
-	
+	<!--  上面暴露的实现类用到了ref
+		按照正常操作的话 我在下面需要写个<bean id="" class="" >
+		但是我们基于注解开发  我们在对应的实现类上的@Service标签 改为 @Service("testTbService")
+	  -->
 </beans>
